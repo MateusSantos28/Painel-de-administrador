@@ -109,7 +109,7 @@
 			</div>
 			<div class="form-floating">
 			  <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Senha" required>
-			  <label for="floatingPassword">Senha</label>
+			  <label class="font-italic" for="floatingPassword">Senha</label>
 			  <i
 					class="bi bi-eye-slash mb-0" 
 				    	id="togglePassword"
