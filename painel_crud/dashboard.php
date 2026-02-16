@@ -194,7 +194,7 @@ if (isset($_POST['code']) && isset($_SESSION['code'])) {
       </div>
       <div class="modal-body">
       <p class="text-muted mb-3">
-        Confirme o código recebido no e-mail: <?=$_SESSION['code']?> 
+        Confirme o código <b class="fst-italic"><?=$_SESSION['code']?></b> recebido no e-mail: 
         <span class="fw-semibold"><?=$_SESSION['email']?></span>
       </p>
       <form action="<?=$_SERVER['PHP_SELF']?>" method="post">

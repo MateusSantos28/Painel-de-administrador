@@ -18,11 +18,6 @@ session_start();
 	
 	<!-- Icons Bootstrap -->
 	<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"-->
-	<style>
-		.point{
-			color: red;
-		}
-	</style>
 </head>
 <body class="text-center">
 	
@@ -33,7 +28,7 @@ session_start();
 			
 			<div class="form-floating">
 			  <input type="text" class="form-control mb-2" id="floatingInput" maxlength="320" name="verify" placeholder="*" required autocomplete="0">
-			  <label for="floatingInput">Digite seu usuario ou email <span class="point">*</span></label>
+			  <label class="fst-italic" for="floatingInput">"mateus" ou "emailsmtp@gmail.com"</label>
 			</div>
 
 			<button class="w-100 btn btn-lg " style="background-color: cadetblue" type="submit"><i class="bi bi-person-lock"></i>Entrar</button>
@@ -46,11 +41,12 @@ session_start();
 				}
 			?>
 			</div>
-			<p class="mt-5 mb-3 text-muted">&copy; Desenvolvido por: Mateus Batista Bento dos Santos Ds2. <?= date("Y");?></p>
+			<p class="mt-5 mb-3 text-muted">&copy; Desenvolvido por: Mateus Batista Bento dos Santos DS. <?= date("Y");?></p>
 		</form>
 	</main>
 	<?php ?>
 	<script>
+
 	window.onload = function () {
 	const aviso = document.getElementById('mss');
 	var contador = 3;
@@ -64,6 +60,7 @@ session_start();
 	    		}, 1000);
 		}
 	}
+
 	</script>
 </body>
 </html>

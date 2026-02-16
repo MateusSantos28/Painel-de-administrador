@@ -26,6 +26,7 @@ session_start();
 
      } else {
           include "conexao.php";
+          $_SESSION['update_senha'] = $up_pass;
           $hash_update = password_hash($up_pass,PASSWORD_DEFAULT);
 
           $update = mysqli_query($conn, "UPDATE login SET password = '$hash_update' WHERE users = '$usuario'");

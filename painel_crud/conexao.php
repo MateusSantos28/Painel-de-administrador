@@ -1,5 +1,5 @@
 <?php
-$servername = "if0_41133013_projeto_login";
+$servername = "sql102.infinityfree.com";
 $username = "if0_41133013";
 $password = "UDMG7gaxdCMs";
 $database = "if0_41133013_projeto_login";

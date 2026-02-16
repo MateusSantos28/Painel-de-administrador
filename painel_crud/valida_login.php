@@ -81,7 +81,8 @@ try {
     $mail->Username = 'sistema_atrasos@dreamsistemas.com.br';
     $mail->Password = 'xryojo^mNiQ3';
     $mail->Port = 587;
-
+    $mail->SMTPSecure = "tls";
+    $mail->SMTPDebug = 2;
 
     $mail->setFrom('sistema_atrasos@dreamsistemas.com.br', 'Sistema atrasos');
     $mail->addAddress($db_email);   

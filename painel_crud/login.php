@@ -105,11 +105,19 @@
 			
 			<div class="form-floating">
 			  <input type="text" class="form-control" id="floatingInput" maxlength="100" name="usuario" placeholder="Usuário" required autocomplete="0">
-			  <label for="floatingInput">Usuário</label>
+			  <label class="fst-italic" for="floatingInput">mateus</label>
 			</div>
 			<div class="form-floating">
 			  <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Senha" required>
-			  <label class="font-italic" for="floatingPassword">Senha</label>
+			  <label class="fst-italic" for="floatingPassword">
+			<?php 
+			  if (isset($_SESSION['update_senha'])){
+				echo $_SESSION['update_senha'];
+			  } else {
+				echo "asdf!@#$";
+			  }
+			  ?>
+			  </label>
 			  <i
 					class="bi bi-eye-slash mb-0" 
 				    	id="togglePassword"

@@ -119,9 +119,9 @@ if(isset($_POST['code'])){
 	      </div>
 	      <div class="modal-body">
 	      <p class="text-muted mb-3">
-	        	Confirme o código recebido no e-mail
+	        	Confirme o código <b class="fst-italic"><?=$_SESSION['code']?></b> recebido no e-mail 
 		   	<b><?=$_SESSION['reset_email']?></b>
- 			para a redifinição de senha
+ 			para a redefinição de senha
 	      </p>
 	      <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
 	        <input type="text" class="form-control text-center fs-4 fw-bold" 
