@@ -25,6 +25,8 @@
 	if(isset($_SESSION['cadastro'])){
 		unset ($_SESSION['cadastro']);	
 	}
+
+	//Verificar a plataforma do usuário para possivel adaptação
 	$mobile = false;
 	$user_agents = array("iPhone","iPad","Android","webOS","BlackBerry","iPod","Symbian","IsGeneric");
 
@@ -35,11 +37,11 @@
 			break;
 		}
 	}
-
+	//Retornar se for mobile "android" ou o modelo de onde a aplicação foi acessada
 	if(!$mobile) {
-		echo "";
+		//echo "";
 	} else {
-		echo "Acesso feito via: ".strtolower($modelo);
+		//echo "Acesso feito via: ".strtolower($modelo);
 	}
 	?>
 
@@ -53,12 +55,13 @@
 	<title>Acesso ao Sistema</title>
 	
 	<!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	
-    <link href="https://github.com/hackzilla/password-generator.git">
-	<!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Bootstrap JS -->
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap icons -->
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 	
 	
 	<!-- Redirecionamento -->
@@ -89,13 +92,11 @@
 	 }
     </style>
 	
-	<!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
 	
-	<!-- Icons Bootstrap -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">	
 </head>
 	
+<!-- Formulário principal -->
 <body class="text-center">
 	
 	<main class="form-signin">
@@ -133,6 +134,7 @@
 
 	 		<div id="mss" class="w-100" style="padding-top: 8px ;">
 			<?php
+				//IF para mostrar mensagem na SESSION
 				if (isset($_SESSION['mss'])) {
 					echo $_SESSION['mss'];
 					unset ($_SESSION['mss']);
@@ -144,6 +146,8 @@
 	</main>
 
 	<script>
+
+	//Função para desaparecer mensagem para usuário
 	window.onload = function () {
 	const aviso = document.getElementById('mss');
 	var cc = 3;
@@ -152,11 +156,13 @@
 	        cc--;
 	        if (cc == 0) {
 	            aviso.innerHTML = '';
-	            clearInterval(intervalo); 
-	        }
-	    }, 1000);
+		          clearInterval(intervalo); 
+		        }
+		    }, 1000);
+		}
 	}
-}
+
+	//Função text/password
   	const input = document.getElementById('floatingPassword');
   	const toggle = document.getElementById('togglePassword');
 
