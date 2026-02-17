@@ -1,7 +1,7 @@
 <?php
 $servername = "sql102.infinityfree.com";
-$username = "if0_41133013";
-$password = "UDMG7gaxdCMs";
+$username = ""; 
+$password = ""; //Ocultos para segurança da aplicação
 $database = "if0_41133013_projeto_login";
 
 $conn = mysqli_connect($servername,$username,$password,$database);
